@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-cd .git/hooks && ln -fs ../../vendor/mollie/coding-standards/src/hooks/* ./ && cd - >> /dev/null

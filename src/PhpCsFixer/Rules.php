@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Mollie\PhpCodingStandards\PhpCsFixer;
 
+/*
+ * Last updated for php-cs-fixer version: 2.15
+ */
 class Rules
 {
     public static function getForPhp71(array $overriddenRules = []): array
