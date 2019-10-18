@@ -7,9 +7,9 @@ Contains PHP coding standards like rules for PHP-CS-Fixer that serves for purpos
 Place a file named `.php_cs.dist` that has following content in your project's root directory.
 
 ```php
+use Mollie\PhpCodingStandards\PhpCsFixer\Rules;
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
-use Mollie\PhpCodingStandards\PhpCsFixer\Rules;
 
 $finder = Finder::create()
     ->name('.php_cs.dist')       // Fix this file as well
@@ -18,22 +18,21 @@ $finder = Finder::create()
 return Config::create()
     ->setFinder($finder)
     ->setRiskyAllowed(true)
-    ->setRules(Rules::getForPhp71());
+    ->setRules(Rules::getForPhp71()); // use specific rules for your php version e.g.: getForPhp71, getForPhp72, getForPhp73
 
 ```
 ### Manual Triggering
 Run following command in your project directory, that will run fixer for every `.php` file.
 ```bash
-vendor/bin/php-cs-fixer fix .
+vendor/bin/php-cs-fixer fix
 ```
 
-### Use via PHPStorm file watcher
-Please follow [official PHPStorm documentation](https://www.jetbrains.com/help/phpstorm/using-php-cs-fixer.html#f21a70ca)
+### Use via PhpStorm file watcher
+Please follow [official PhpStorm documentation](https://www.jetbrains.com/help/phpstorm/using-php-cs-fixer.html#f21a70ca)
 
-### Use via pre-commit, pre-push etc. git hook
+### Use via pre-commit git hook
 
-Place a file with the content of the following bash script into `.git/hooks` directory called pre-commit or pre-push 
-and make it executable 
+Place a file with the content of the following bash script into `.git/hooks` directory called pre-commit and make it executable 
 you can find more details about git hooks on [official git manual](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks). 
 
 ```bash
@@ -64,8 +63,17 @@ done
 ```
 
 ## Installation
-[Get Composer](https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md)
 
 ```bash
-composer require --dev  mollie/php-coding-standards:v1.0
+composer require --dev  mollie/php-coding-standards: ^1.0
 ```
+
+## Working at Mollie
+
+Mollie is always looking for new talent to join our teams. We’re looking for inquisitive minds with good ideas and
+strong opinions, and, most importantly, who know how to ship great products. Want to join the future of payments? 
+[Check out our vacancies](https://jobs.mollie.com).
+
+## License
+[BSD (Berkeley Software Distribution) License](https://opensource.org/licenses/bsd-license.php).
+Copyright (c) 2013-2019, Mollie B.V.

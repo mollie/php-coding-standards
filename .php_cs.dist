@@ -1,8 +1,8 @@
 <?php
 
+use Mollie\PhpCodingStandards\PhpCsFixer\Rules;
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
-use Mollie\PhpCodingStandards\PhpCsFixer\Rules;
 
 $finder = Finder::create()
     ->name('.php_cs.dist')       // Fix this file as well
