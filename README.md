@@ -2,6 +2,23 @@
 Contains PHP coding standards like rules for PHP-CS-Fixer that serves for purpose of standardization.
 
 ## Usage
+This package makes use of PHP-CS-Fixer.
+
+### Already familiar with PHP-CS-Fixer
+
+This package provides default rules to be used with PHP-CS-Fixer.
+
+You can find them in `Mollie\PhpCodingStandards\PhpCsFixer\Rules` which has methods specific to php version,
+which you can directly use in the `->setRules()` part of your config. For example, assuming PHP version 7.3:
+
+```php
+use Mollie\PhpCodingStandards\PhpCsFixer\Rules;
+
+$config->setRules(Rules::getForPhp73());
+``` 
+
+### New to PHP-CS-Fixer
+
 Place a file named `.php_cs.dist` that has following content in your project's root directory.
 
 ```php
@@ -18,8 +35,8 @@ return Config::create()
     ->setRiskyAllowed(true)
     // use specific rules for your php version e.g.: getForPhp71, getForPhp72, getForPhp73
     ->setRules(Rules::getForPhp71());
-
 ```
+
 ### Manual Triggering
 Run following command in your project directory, that will run fixer for every `.php` file.
 ```bash
