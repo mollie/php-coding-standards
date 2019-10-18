@@ -1,0 +1,13 @@
+<?php
+
+use PhpCsFixer\Config;
+use PhpCsFixer\Finder;
+
+$finder = Finder::create()
+    ->name('.php_cs.dist')       // Fix this file as well
+    ->in(__DIR__);
+
+return Config::create()
+    ->setFinder($finder)
+    ->setRiskyAllowed(true)
+    ->setRules(Rules::getForPhp71());

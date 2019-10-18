@@ -1,0 +1,27 @@
+{
+    "name": "mollie/php-coding-standards",
+    "description": "Contains PHP coding standards like rules for PHP-CS-Fixer that serves for purpose of standardization.",
+    "license": "proprietary",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mollie B.V.",
+            "email": "info@mollie.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mollie\\PhpCodingStandards\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.1.3"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.15"
+    },
+    "bin": [
+        "bin/link-git-hooks"
+    ]
+}
