@@ -9,6 +9,7 @@ Place a file named `.php_cs.dist` that has following content in your project's r
 ```php
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
+use Mollie\PhpCodingStandards\PhpCsFixer\Rules;
 
 $finder = Finder::create()
     ->name('.php_cs.dist')       // Fix this file as well
@@ -18,6 +19,7 @@ return Config::create()
     ->setFinder($finder)
     ->setRiskyAllowed(true)
     ->setRules(Rules::getForPhp71());
+
 ```
 ### Manual Triggering
 Run following command in your project directory, that will run fixer for every `.php` file.

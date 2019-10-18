@@ -14,7 +14,7 @@ class Rules
         return array_merge(self::getBaseRules(), $overriddenRules);
     }
 
-    public static function getForPhp72(array $overriddenRules = []) : array
+    public static function getForPhp72(array $overriddenRules = []): array
     {
         $specific72Rules = [
             // At the moment there are no specific 7.2 rules or configurations
@@ -23,7 +23,7 @@ class Rules
         return array_merge(self::getForPhp71($specific72Rules), $overriddenRules);
     }
 
-    public static function getForPhp73(array $overriddenRules = []) : array
+    public static function getForPhp73(array $overriddenRules = []): array
     {
         $specific73Rules = [
             'heredoc_indentation'   => true,
