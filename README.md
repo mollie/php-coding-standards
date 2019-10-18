@@ -1,9 +1,7 @@
 # Mollie PHP Coding Standards
-
 Contains PHP coding standards like rules for PHP-CS-Fixer that serves for purpose of standardization.
 
 ## Usage
-
 Place a file named `.php_cs.dist` that has following content in your project's root directory.
 
 ```php
@@ -31,7 +29,6 @@ vendor/bin/php-cs-fixer fix
 Please follow [official PhpStorm documentation](https://www.jetbrains.com/help/phpstorm/using-php-cs-fixer.html#f21a70ca)
 
 ### Use via pre-commit git hook
-
 Place a file with the content of the following bash script into `.git/hooks` directory called pre-commit and make it executable 
 you can find more details about git hooks on [official git manual](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks). 
 
@@ -63,13 +60,11 @@ done
 ```
 
 ## Installation
-
 ```bash
 composer require --dev  mollie/php-coding-standards: ^1.0
 ```
 
 ## Working at Mollie
-
 Mollie is always looking for new talent to join our teams. We’re looking for inquisitive minds with good ideas and
 strong opinions, and, most importantly, who know how to ship great products. Want to join the future of payments? 
 [Check out our vacancies](https://jobs.mollie.com).
