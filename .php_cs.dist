@@ -1,5 +1,6 @@
 <?php
 
+use Mollie\PhpCodingStandards\PhpCsFixer\Rules;
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
