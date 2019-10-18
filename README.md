@@ -10,13 +10,14 @@ use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
 $finder = Finder::create()
-    ->name('.php_cs.dist')       // Fix this file as well
+    ->name('.php_cs.dist') // Fix this file as well
     ->in(__DIR__);
 
 return Config::create()
     ->setFinder($finder)
     ->setRiskyAllowed(true)
-    ->setRules(Rules::getForPhp71()); // use specific rules for your php version e.g.: getForPhp71, getForPhp72, getForPhp73
+    // use specific rules for your php version e.g.: getForPhp71, getForPhp72, getForPhp73
+    ->setRules(Rules::getForPhp71());
 
 ```
 ### Manual Triggering
@@ -61,7 +62,7 @@ done
 
 ## Installation
 ```bash
-composer require --dev  mollie/php-coding-standards: ^1.0
+composer require --dev  mollie/php-coding-standards
 ```
 
 ## Working at Mollie
