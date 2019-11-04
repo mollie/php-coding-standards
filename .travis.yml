@@ -5,11 +5,13 @@ dist: xenial
 matrix:
   fast_finish: true
   allow_failures:
+    - php: 7.4snapshot
     - php: nightly
   include:
     - php: 7.1
     - php: 7.2
     - php: 7.3
+    - php: 7.4snapshot
     - php: nightly
 
 sudo: false
@@ -27,4 +29,4 @@ install:
 script:
   - composer validate --strict
   - find src -name *.php | xargs -n 1 php -l
-  - vendor/bin/php-cs-fixer fix --dry-run
+  - vendor/bin/php-cs-fixer fix -v --dry-run
