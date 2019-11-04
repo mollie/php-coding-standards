@@ -1,7 +1,7 @@
 {
     "name": "mollie/php-coding-standards",
     "description": "Contains PHP coding standards like rules for PHP-CS-Fixer that serves for purpose of standardization.",
-    "license": "proprietary",
+    "license": "BSD-2-Clause",
     "type": "library",
     "authors": [
         {
