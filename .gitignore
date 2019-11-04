@@ -1,1 +1,7 @@
+.idea/
 .php_cs.cache
+
+# Libraries should ignore the lock file
+composer.lock
+
+vendor/
