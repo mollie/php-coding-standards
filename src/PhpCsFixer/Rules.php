@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Mollie\PhpCodingStandards\PhpCsFixer;
 
 /*
- * Last updated for php-cs-fixer version: 2.15
+ * Last updated for php-cs-fixer version: 2.16
  */
 class Rules
 {
@@ -46,10 +46,7 @@ class Rules
             'align_multiline_comment' => [
                 'comment_type' => 'all_multiline',
             ],
-            'array_indentation' => true,
-            'array_syntax'      => [
-                'syntax' => 'short',
-            ],
+            'array_indentation'      => true,
             'binary_operator_spaces' => [
                 'default' => 'align_single_space_minimal',
             ],
@@ -75,6 +72,7 @@ class Rules
             'explicit_string_variable'     => true,
             'fully_qualified_strict_types' => true,
             'function_to_constant'         => true,
+            'global_namespace_import'      => true,
             // 'header_comment'            => [ // Has too many issues atm
             //     'header' => '',
             // ],
@@ -105,14 +103,15 @@ class Rules
                     // TODO: Add 'use' when php-cs-fixer #3582 is fixed
                 ],
             ],
-            'no_null_property_initialization' => true,
-            'no_superfluous_elseif'           => true,
-            'no_superfluous_phpdoc_tags'      => true,
-            'no_unset_cast'                   => true,
-            'no_unset_on_property'            => false, // It's purposely used for the side effect :(
-            'no_useless_else'                 => true,
-            'no_useless_return'               => true,
-            'ordered_class_elements'          => [
+            'no_null_property_initialization'                  => true,
+            'no_superfluous_elseif'                            => true,
+            'no_superfluous_phpdoc_tags'                       => true,
+            'no_unset_cast'                                    => true,
+            'no_unset_on_property'                             => false, // It's purposely used for the side effect :(
+            'no_useless_else'                                  => true,
+            'no_useless_return'                                => true,
+            'nullable_type_declaration_for_default_null_value' => true,
+            'ordered_class_elements'                           => [
                 'order' => [
                     'use_trait',
                     'constant_public', 'constant_protected', 'constant_private',
@@ -123,6 +122,12 @@ class Rules
             'ordered_imports' => [
                 'imports_order' => ['class', 'function', 'const'],
             ],
+            'phpdoc_line_span' => [
+                'const'    => 'single',
+                'method'   => 'multi',
+                'property' => 'single',
+            ],
+            'phpdoc_no_empty_return'                 => true,
             'php_unit_construct'                     => true,
             'php_unit_dedicate_assert_internal_type' => true,
             'php_unit_method_casing'                 => true,
@@ -149,6 +154,7 @@ class Rules
             'simple_to_complex_string_variable'   => true,
             'simplified_null_return'              => false, // Too many old code places that become implicit, also ignores doc blocks.
             'single_class_element_per_statement'  => true,
+            'single_line_throw'                   => false,
             'single_quote'                        => false,
             'single_trait_insert_per_statement'   => true,
             'space_after_semicolon'               => [

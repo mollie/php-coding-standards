@@ -1,14 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 use Mollie\PhpCodingStandards\PhpCsFixer\Rules;
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
 $finder = Finder::create()
-    ->name('.php_cs.dist')       // Fix this file as well
+    ->name('.php_cs.dist') // Fix this file as well
     ->in(__DIR__);
+
+$overrides = [
+    'declare_strict_types' => true,
+];
 
 return Config::create()
     ->setFinder($finder)
     ->setRiskyAllowed(true)
-    ->setRules(Rules::getForPhp71());
+    ->setRules(Rules::getForPhp71($overrides));
