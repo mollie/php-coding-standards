@@ -72,7 +72,7 @@ class Rules
             'explicit_string_variable'     => true,
             'fully_qualified_strict_types' => true,
             'function_to_constant'         => true,
-            'global_namespace_import'      => true,
+            'global_namespace_import'      => false,
             // 'header_comment'            => [ // Has too many issues atm
             //     'header' => '',
             // ],
