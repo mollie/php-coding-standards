@@ -22,6 +22,8 @@ $config->setRules(Rules::getForPhp73());
 Place a file named `.php_cs.dist` that has following content in your project's root directory.
 
 ```php
+<?php 
+
 use Mollie\PhpCodingStandards\PhpCsFixer\Rules;
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
