@@ -1,6 +1,11 @@
 # Mollie PHP Coding Standards
 Contains PHP coding standards like rules for PHP-CS-Fixer that serves for purpose of standardization.
 
+## Installation
+```bash
+composer require --dev  mollie/php-coding-standards
+```
+
 ## Usage
 This package makes use of PHP-CS-Fixer.
 
@@ -77,11 +82,6 @@ git diff --diff-filter=ACMRTUXB --name-only --staged | grep -E '\.php(_cs\.dist)
         git add ${FILE}
     fi
 done
-```
-
-## Installation
-```bash
-composer require --dev  mollie/php-coding-standards
 ```
 
 ## Working at Mollie
