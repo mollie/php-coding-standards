@@ -24,7 +24,7 @@ $config->setRules(Rules::getForPhp73());
 
 ### New to PHP-CS-Fixer
 
-Place a file named `.php_cs.dist` that has following content in your project's root directory.
+Place a file named `.php-cs-fixer.dist.php` that has the following content in your project's root directory.
 
 ```php
 <?php 
@@ -34,10 +34,10 @@ use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
 $finder = Finder::create()
-    ->name('.php_cs.dist') // Fix this file as well
+    ->name('.php-cs-fixer.dist.php') // Fix this file as well
     ->in(__DIR__);
 
-return Config::create()
+return (new Config())
     ->setFinder($finder)
     ->setRiskyAllowed(true)
     // use specific rules for your php version e.g.: getForPhp71, getForPhp72, getForPhp73

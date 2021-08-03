@@ -7,14 +7,14 @@ use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
 $finder = Finder::create()
-    ->name('.php_cs.dist') // Fix this file as well
+    ->name('.php-cs-fixer.dist.php') // Fix this file as well
     ->in(__DIR__);
 
 $overrides = [
     'declare_strict_types' => true,
 ];
 
-return Config::create()
+return (new Config())
     ->setFinder($finder)
     ->setRiskyAllowed(true)
     ->setRules(Rules::getForPhp71($overrides));
