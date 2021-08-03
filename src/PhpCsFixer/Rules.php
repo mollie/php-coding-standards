@@ -79,9 +79,6 @@ class Rules
             'increment_style' => [
                 'style' => 'post',
             ],
-            'is_null' => [
-                'use_yoda_style' => false,
-            ],
             'list_syntax' => [
                 'syntax' => 'short',
             ],
