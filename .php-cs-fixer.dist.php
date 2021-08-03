@@ -7,7 +7,6 @@ use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
 $finder = Finder::create()
-    ->name('.php-cs-fixer.dist.php') // Fix this file as well
     ->in(__DIR__);
 
 $overrides = [
