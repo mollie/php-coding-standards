@@ -48,7 +48,10 @@ class Rules
             ],
             'array_indentation'      => true,
             'binary_operator_spaces' => [
-                'default' => 'align_single_space_minimal',
+                'default'   => 'single_space',
+                'operators' => [
+                    '=>' => 'align_single_space_minimal',
+                ],
             ],
             'blank_line_before_statement' => [
                 'statements' => [
