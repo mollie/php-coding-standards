@@ -155,6 +155,9 @@ class Rules
                 'remove_in_empty_for_expressions' => true,
             ],
             'ternary_to_null_coalescing' => true,
+            'types_spaces' => [
+                'space' => 'single', // Added to keep previous behaviour with the cs-fixer 3.1.0 upgrade.
+            ],
             'visibility_required' => [
                 'elements' => [
                     'const', 'method', 'property',
