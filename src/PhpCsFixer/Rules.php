@@ -9,11 +9,17 @@ namespace Mollie\PhpCodingStandards\PhpCsFixer;
  */
 class Rules
 {
+    /**
+     * @deprecated php version 7.1 is no longer supported
+     */
     public static function getForPhp71(array $overriddenRules = []): array
     {
         return array_merge(self::getBaseRules(), $overriddenRules);
     }
 
+    /**
+     * @deprecated php version 7.2 is no longer supported
+     */
     public static function getForPhp72(array $overriddenRules = []): array
     {
         $specific72Rules = [
@@ -23,6 +29,9 @@ class Rules
         return array_merge(self::getForPhp71($specific72Rules), $overriddenRules);
     }
 
+    /**
+     * @deprecated php version 7.3 is no longer supported
+     */
     public static function getForPhp73(array $overriddenRules = []): array
     {
         $specific73Rules = [
@@ -37,6 +46,33 @@ class Rules
         ];
 
         return array_merge(self::getForPhp72($specific73Rules), $overriddenRules);
+    }
+
+    public static function getForPhp74(array $overriddenRules = []): array
+    {
+        $specific74Rules = [
+            // At the moment there are no specific 7.4 rules or configurations
+        ];
+
+        return array_merge(self::getForPhp73($specific74Rules), $overriddenRules);
+    }
+
+    public static function getForPhp80(array $overriddenRules = []): array
+    {
+        $specific80Rules = [
+            // At the moment there are no specific 8.0 rules or configurations
+        ];
+
+        return array_merge(self::getForPhp74($specific80Rules), $overriddenRules);
+    }
+
+    public static function getForPhp81(array $overriddenRules = []): array
+    {
+        $specific81Rules = [
+            'declare_strict_types' => true,
+        ];
+
+        return array_merge(self::getForPhp80($specific81Rules), $overriddenRules);
     }
 
     private static function getBaseRules(): array
@@ -95,6 +131,11 @@ class Rules
                     'break', 'case', 'continue', 'curly_brace_block', 'default', 'extra', 'parenthesis_brace_block',
                     'return', 'square_brace_block', 'throw', 'use_trait',
                     // TODO: Add 'use' when php-cs-fixer #3582 is fixed
+                ],
+            ],
+            'class_attributes_separation' => [
+                'elements' => [
+                    'trait_import' => 'none',
                 ],
             ],
             'no_null_property_initialization' => true,
