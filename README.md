@@ -14,12 +14,12 @@ This package makes use of PHP-CS-Fixer.
 This package provides default rules to be used with PHP-CS-Fixer.
 
 You can find them in `Mollie\PhpCodingStandards\PhpCsFixer\Rules` which has methods specific to php version,
-which you can directly use in the `->setRules()` part of your config. For example, assuming PHP version 7.3:
+which you can directly use in the `->setRules()` part of your config. For example, assuming PHP version 8.2:
 
 ```php
 use Mollie\PhpCodingStandards\PhpCsFixer\Rules;
 
-$config->setRules(Rules::getForPhp73());
+$config->setRules(Rules::getForPhp82());
 ``` 
 
 ### New to PHP-CS-Fixer
@@ -39,8 +39,8 @@ $finder = Finder::create()
 return (new Config())
     ->setFinder($finder)
     ->setRiskyAllowed(true)
-    // use specific rules for your php version e.g.: getForPhp71, getForPhp72, getForPhp73
-    ->setRules(Rules::getForPhp71());
+    // use specific rules for your php version e.g.: getForPhp74, getForPhp80, getForPhp81
+    ->setRules(Rules::getForPhp74());
 ```
 
 ### Manual Triggering
@@ -90,4 +90,4 @@ strong opinions, and, most importantly, who know how to ship great products. Wan
 
 ## License
 [BSD (Berkeley Software Distribution) License](https://opensource.org/licenses/bsd-license.php).
-Copyright (c) 2019, Mollie B.V.
+Copyright (c) 2023, Mollie B.V.
