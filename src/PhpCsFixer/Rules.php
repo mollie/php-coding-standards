@@ -138,8 +138,7 @@ class Rules
             'no_extra_blank_lines' => [
                 'tokens' => [
                     'break', 'case', 'continue', 'curly_brace_block', 'default', 'extra', 'parenthesis_brace_block',
-                    'return', 'square_brace_block', 'throw', 'use_trait',
-                    // TODO: Add 'use' when php-cs-fixer #3582 is fixed
+                    'return', 'square_brace_block', 'throw',
                 ],
             ],
             'class_attributes_separation' => [
