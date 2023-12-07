@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Mollie\PhpCodingStandards\PhpCsFixer;
 
 /*
- * Last updated for php-cs-fixer version: 3.15.1
+ * Last updated for php-cs-fixer version: 3.40.2
  */
 class Rules
 {
@@ -82,6 +82,15 @@ class Rules
         ];
 
         return array_merge(self::getForPhp81($specific82Rules), $overriddenRules);
+    }
+
+    public static function getForPhp83(array $overriddenRules = []): array
+    {
+        $specific83Rules = [
+            // At the moment there are no specific 8.3 rules or configurations
+        ];
+
+        return array_merge(self::getForPhp82($specific83Rules), $overriddenRules);
     }
 
     private static function getBaseRules(): array
