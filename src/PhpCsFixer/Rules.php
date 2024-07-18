@@ -104,7 +104,7 @@ class Rules
             'blank_line_before_statement' => [
                 'statements' => [
                     'break', 'continue', 'case', 'declare', 'default', 'do', 'for', 'foreach',
-                    'if', 'return', 'switch', 'throw', 'try', 'while', 'yield',
+                    'if', 'return', 'switch', 'throw', 'try', 'while',
                 ],
             ],
             'cast_spaces' => [
