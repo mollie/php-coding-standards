@@ -104,7 +104,7 @@ class Rules
             'blank_line_before_statement' => [
                 'statements' => [
                     'break', 'continue', 'case', 'declare', 'default', 'do', 'for', 'foreach',
-                    'if', 'return', 'switch', 'throw', 'try', 'while', 'yield',
+                    'if', 'return', 'switch', 'throw', 'try', 'while',
                 ],
             ],
             'cast_spaces' => [
@@ -113,12 +113,12 @@ class Rules
             'combine_consecutive_issets' => true,
             'combine_consecutive_unsets' => true,
             'combine_nested_dirname' => true,
-            'compact_nullable_typehint' => true,
+            'compact_nullable_type_declaration' => true,
             'concat_space' => [
                 'spacing' => 'one',
             ],
             'dir_constant' => true,
-            'escape_implicit_backslashes' => true,
+            'string_implicit_backslashes' => true,
             'explicit_indirect_variable' => true,
             'explicit_string_variable' => true,
             'fully_qualified_strict_types' => true,
@@ -141,7 +141,7 @@ class Rules
             'modernize_types_casting' => true,
             'multiline_comment_opening_closing' => true,
             'multiline_whitespace_before_semicolons' => true,
-            'native_function_type_declaration_casing' => true,
+            'native_type_declaration_casing' => true,
             'no_alias_functions' => true,
             'no_alternative_syntax' => true,
             'no_extra_blank_lines' => [
