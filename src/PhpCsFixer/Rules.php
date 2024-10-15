@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Mollie\PhpCodingStandards\PhpCsFixer;
 
 /*
- * Last updated for php-cs-fixer version: 3.40.2
+ * Last updated for php-cs-fixer version: 3.64.0
  */
 class Rules
 {
@@ -225,6 +225,16 @@ class Rules
                 'equal' => false,
                 'identical' => false,
                 'less_and_greater' => false,
+            ],
+            'trailing_comma_in_multiline' => [
+                'after_heredoc' => true,
+                'elements' => [
+                    'arguments',
+                    'array_destructuring',
+                    'arrays',
+                    'match',
+                    'parameters',
+                ],
             ],
         ];
     }

@@ -16,4 +16,4 @@ $overrides = [
 return (new Config())
     ->setFinder($finder)
     ->setRiskyAllowed(true)
-    ->setRules(Rules::getForPhp71($overrides));
+    ->setRules(Rules::getForPhp83($overrides));
