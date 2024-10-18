@@ -183,9 +183,6 @@ class Rules
             'php_unit_construct' => true,
             'php_unit_dedicate_assert_internal_type' => true,
             'php_unit_method_casing' => true,
-            'php_unit_test_case_static_method_calls' => [
-                'call_type' => 'self',
-            ],
             'phpdoc_annotation_without_dot' => false, // Sometimes comments have a good reason to end with a dot. Leave this up to the engineer.
             'phpdoc_no_alias_tag' => [
                 'replacements' => [
