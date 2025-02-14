@@ -186,6 +186,7 @@ class Rules
             'php_unit_test_case_static_method_calls' => [
                 'call_type' => 'self',
             ],
+            'phpdoc_align' => ['align' => 'left'], // Prevent modifying multiple lines when changing one param in a docblock
             'phpdoc_annotation_without_dot' => false, // Sometimes comments have a good reason to end with a dot. Leave this up to the engineer.
             'phpdoc_no_alias_tag' => [
                 'replacements' => [
