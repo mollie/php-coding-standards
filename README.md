@@ -90,4 +90,4 @@ strong opinions, and, most importantly, who know how to ship great products. Wan
 
 ## License
 [BSD (Berkeley Software Distribution) License](https://opensource.org/licenses/bsd-license.php).
-Copyright (c) 2023, Mollie B.V.
+Copyright (c) 2025, Mollie B.V.
